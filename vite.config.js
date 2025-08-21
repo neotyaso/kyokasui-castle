@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
-    base: '/', // 追加：相対パスにする
+    base: '/',
     plugins: [
         laravel({
             input: 'resources/js/app.jsx',
@@ -11,4 +12,8 @@ export default defineConfig({
         }),
         react(),
     ],
+    build: {
+        outDir: 'dist', // ← ここで出力先をdistに
+        emptyOutDir: true,
+    },
 });
