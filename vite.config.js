@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 export default defineConfig({
-    base: '/',
+    base: '/',  // URLを相対にしてHTTPSでもMixed Content出ないように
     plugins: [
         laravel({
             input: 'resources/js/app.jsx',
@@ -12,8 +11,4 @@ export default defineConfig({
         }),
         react(),
     ],
-    build: {
-        outDir: 'dist', // ← ここで出力先をdistに
-        emptyOutDir: true,
-    },
 });
