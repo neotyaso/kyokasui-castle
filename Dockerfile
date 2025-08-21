@@ -1,10 +1,11 @@
 FROM php:8.2-fpm-alpine
 
-# 必要なパッケージをインストール
+# 必要なパッケージをインストール（sqlite-devを追加）
 RUN apk add --no-cache \
     nodejs \
     npm \
-    sqlite
+    sqlite \
+    sqlite-dev
 
 # PHP拡張をインストール
 RUN docker-php-ext-install pdo pdo_sqlite
