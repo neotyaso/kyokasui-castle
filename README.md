@@ -1,61 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏯 鏡花水月城（フルスタック版）
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+水墨画風デザインで統一したwebサイト。実際に一般ユーザーが体験することも管理者が投稿したお知らせを一般ユーザーが閲覧できるwebアプリケーションです。
 
-## About Laravel
+## 🌐 フロントエンド版について
+動作確認用のフロントエンド版: [デプロイURL]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 開発経緯
+最初はフロントエンドのみで作成し、とりあえず動くものを公開しました。
+その後、**フルスタック開発に挑戦したくなり**、Laravelを学習してバックエンドも含めた本格的なWebアプリケーションとして再構築しました。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### フロント版の開発方針
+お問い合わせページなどは、フルスタック版で本格的に実装する予定だったため、フロント版では**最も重要な機能を優先**して開発しました。限られた時間の中で、価値の高い機能から実装するという戦略的判断をしました。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Laravel版での追加・改善
+- 管理者認証システムの実装
+- データベースとの連携
+- CRUD操作の実装
+- より洗練されたアーキテクチャ
+- お問い合わせ機能の本格実装
+## 🔧 技術スタック
+- **Backend:** PHP Laravel 12
+- **Frontend:** React.js 
+- **Framework:** Inertia.js
+- **Database:** SQLite
+- **CSS:** Tailwind CSS
+- **Auth:** Laravel Breeze
+- **Animation:** Framer Motion
+- **Slider:** Swiper.js
 
-## Learning Laravel
+## ✨ 主な機能
+- 🔐 管理者認証システム（Laravel Breeze）
+- 📝 お知らせのCRUD操作
+- 👥 一般ユーザー向け閲覧画面
+- 📱 レスポンシブデザイン（4サイズ対応）
+- 🎨 水墨画風UI統一デザイン
+- ⚡ SPAライクなスムーズなページ遷移
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 開発背景・動機
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### フロントエンドへのこだわり
+「きれいだな」「印象に残るな」と思ってもらえるサイトを作りたかったからです。ユーザーがページを開いた瞬間に「おお！」と感動してもらえるような、美しく印象的なWebサイトを制作することを目指しました。フロントエンドを作るなら、ただ機能するだけでなく、視覚的にも魅力的なものを作りたいという強いこだわりがありました。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 実践的なフルスタック開発
+Laravelを使って実際の管理画面でお知らせやお問い合わせの管理ができるようにして、本物のホームページのような実用性を持たせたいと考えました。単なる練習作品ではなく、実際のビジネスでも使えるレベルのWebアプリケーションを目指しました。
 
-## Laravel Sponsors
+## 🎯 技術的な工夫・こだわり
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 超細かいレスポンシブ対応
+レスポンシブデザインに特にこだわりました。単純にスマホ・タブレット・PCの3段階ではなく、より実践的な4つのサイズで設計しました：
+- スマートフォン
+- タブレット  
+- ノートパソコン
+- 大型ノートパソコン・デスクトップ
 
-### Premium Partners
+### 🍎 iPhone SE専用の最適化
+特に苦労したのは、iPhone SEでのレイアウト崩れ対応です。iPhone SEは画面サイズが特殊で、通常のスマホ用ブレークポイントだけではレイアウトが崩れる箇所がありました。実際にiPhone SEで表示確認を行い、崩れる部分を特定して、**iPhone SE専用のブレークポイントを細かく設定**して修正しました。
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### アニメーションとインタラクション
+- **Framer Motion**を使用して滑らかなアニメーションを実装
+- **Swiper.js**でスライダー機能を追加
+- 静的なサイトではなく、動きのある生き生きとしたWebサイトを実現
 
-## Contributing
+## 💡 開発で苦労した点・学んだこと
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 初挑戦の技術ばかり
+今回使用した技術（Laravel、React、Inertia.js、Framer Motion、Swiper.js）はほとんどが初めて触る技術でした。
 
-## Code of Conduct
+### 学習プロセス
+Laravel学習では、まず教材を色々試してみました。**Udemyで講座を購入したり、海外のYouTube動画で勉強したり**しましたが、自分の作りたいものに合う良い教材がなかなか見つかりませんでした。
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+そこで、**実際に手を動かしながらAIに質問して教わりながら、Laravelの流れを掴んで作成することにしました。**この学習方法により、単に教材をなぞるのではなく、実際の開発現場により近い問題解決能力を身につけることができたと思います。
 
-## Security Vulnerabilities
+エラーが頻発する中で、公式ドキュメントを読み込み、Stack Overflowで調べ、AIとのやり取りを通じて試行錯誤を繰り返しながら実装しました。
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### デバッグスキルの向上
+特にInertia.jsでLaravelとReactを連携させる部分や、Framer Motionのアニメーション実装で多くのエラーに遭遇しました。しかし、エラーメッセージを丁寧に読み、原因を特定して解決する過程で、**デバッグスキルが大幅に向上**したと感じています。
 
-## License
+### 実践的な開発経験
+教材やチュートリアルとは違い、自分で要件定義から設計、実装まで一貫して行うことで、実際の開発現場に近い経験を積むことができました。
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📈 現在の状況
+- ✅ ローカル環境での動作確認済み
+- ✅ フロントエンド版デプロイ完了
+- 🔄 プロダクション環境構築中
+
+## 👤 開発者より
+お城と水墨画が好きで、美しいWebサイトを作りたいという想いで開発しました。技術力だけでなく、ユーザーに感動を与えるWebアプリケーションを目指して制作しています。実際の開発現場でも活かせる知識と経験を得られたと思います。
+
+今回の開発を通して、モダンなWeb開発のフルスタック経験を積むことができました。特に、フロントエンドとバックエンドの連携部分や、ユーザー体験を考慮したUI設計について学ぶことができました。
+
+---
+**水墨画の美しさとモダンWeb技術の融合をお楽しみください** 🎨✨
